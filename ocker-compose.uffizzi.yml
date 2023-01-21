@@ -1,0 +1,13 @@
+x-uffizzi:
+  ingress:
+    service: app
+    port: 80
+
+# My application
+services:
+  app:
+    image: tgbot/aio:latest    # Output of build step stored as environment variable
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
